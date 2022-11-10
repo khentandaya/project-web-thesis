@@ -1,0 +1,238 @@
+.clearfloat{
+    clear:both;
+}
+
+#head{
+    height:50px;
+    width:100%;
+    margin:0px;
+    padding:0px;
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+#rightnav{
+    background-color: #a41d21;
+    float:right;
+    margin:0px;
+    color:#000;
+    font-size:10px;
+    height:50px;
+    right:0px;
+    left:230px;
+    position: absolute;
+}
+#rightnav ul{
+    list-style-type:none;
+}
+
+
+text{
+    color:black;
+}
+
+#logo{
+    float:left;
+    background-color: #931d23;
+    position:absolute;
+    left:0px;
+    width:230px;
+    height:50px;
+    margin:0px;
+
+}
+
+#tognav{
+    float:left;
+    position:relative;
+    margin:0px;
+    height:16px;
+    width:16px;
+    background-image:url("images/img9.png");
+    background-size:14px 10px;
+    background-repeat: no-repeat;
+    top:20px;
+    left:15px;
+}
+
+#userna{
+    float:right;
+}
+
+#userpanel{
+    margin: 0px;
+    float:left;
+    background-color:#333333;
+    width:230px;
+    position:absolute;
+    height:100%;
+    left:0px;
+    top:50px;
+}
+
+#userpanel ul{
+    list-style-type:none;
+}
+
+#main{
+    float:right;
+    position:absolute;
+    left:230px;
+    top:50px;
+    padding:0;
+}
+
+#welcome{
+    background-image: url("/static/images/img1.png");
+    background-size: 1130px 320px;
+    position:relative;
+    bottom:20px;
+    height: 300px;
+}
+
+#welcomemessage{
+    color:white;
+    position:absolute;
+    top:190px;
+    left:20px;
+    font-size: 37px;
+    font-family:Cochin;
+    max-width: 700px;
+}
+
+#textbody{
+    margin-left: 25px;
+    margin-right:25px;
+    border-style: hidden;
+    background-color: #ededed;
+    padding:20px;
+    text-align: justify;
+    border-radius: 20px;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+text{
+    color: #777;
+}
+
+#apply{
+    font-size:20px;
+    font-family: Arial, Helvetica, sans-serif;
+    position:relative;
+    left:45px;
+    margin-top:10px;
+}
+
+#start{
+    margin-top:10px;
+    border-style: hidden;
+    background-color: #ee6266;
+    font-weight:500;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    height:45px;
+    width:150px;
+    position:relative;
+    left:50px;
+    border-radius:10px;
+}
+
+#start a{
+    position:relative;
+    left: 40px;
+    top: 15px;
+    text-decoration: none;
+    color:white;
+}
+#proficon{
+    height:25px;
+    width:25px;
+    border-radius:50%;
+    background-image: url("images/img2.png");
+    background-size:25px 25px;
+    position:relative;
+    float:left;
+    right:25px;
+    top:3px;
+}
+#rightname{
+    color:white;
+    font-size: 12px;
+    font-family: sans-serif;
+    position:relative;
+    right:16px;
+    float:left;
+    top:8px;
+}
+
+#prof{
+    height:120px;
+    width:120px;
+    border-radius:50%;
+    background-image: url("images/img2.png");
+    background-size:120px 120px;
+    position:relative;
+    left:55px;
+    top:10px;
+    margin-bottom: 18px;
+}
+
+#profname{
+    color:#b7b4a7;
+    font-size:13px;
+    position:relative;
+    left:50px;
+    margin-bottom: 0px;
+}
+
+#menu a{
+    color:white;
+    font-size:14px;
+    text-decoration: none;
+}
+#menu li{
+    position:relative;
+    right:20px;
+}
+#menu li div{
+    height:16px;
+    width:16px;
+    float:left;
+    margin-right: 9px;
+    position:relative;
+    top:3px;
+}
+
+#log1 {
+    background-image:url("images/img4.png");
+    background-size:13px 13px;
+    background-repeat: no-repeat;
+}
+#log2 {
+    background-image:url("images/img5.png");
+    background-size:16px 11px;
+    background-repeat: no-repeat;
+}
+
+#log3 {
+    background-image:url("images/img6.png");
+    background-size:15px 14px;
+    background-repeat: no-repeat;
+}
+#log4 {
+    background-image:url("images/img7.png");
+    background-size:15px 12px;
+    background-repeat: no-repeat;
+}
+#log5 {
+    background-image:url("images/img8.png");
+    background-size:14px 13px;
+    background-repeat: no-repeat;
+}
+
+#menu li{
+    padding-top:13px;
+    padding-bottom:13px;
+}

@@ -1,0 +1,468 @@
+{{#if starter}}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <title>{{ args.title }}</title>
+      <link href="/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <link href="/ogc/css/signin.css" rel="stylesheet">
+      <link rel="icon" href="/ogc/img/favicon.ico" type="image/x-icon" />
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+   </head>
+   <body>
+      {{{ body }}}
+      <script src="/plugins/jQuery/jquery-2.2.3.min.js"></script>
+      <script src="/ogc/js/nprogress.js"></script>
+   </body>
+</html>
+{{else if authorizeUser}}
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+      <title>{{ args.title }}</title>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+      <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+      <link rel="icon" href="/ogc/img/favicon.ico" type="image/x-icon" />
+      <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+      <style type="text/css">
+         #customBtn {
+         display: inline-block;
+         background: white;
+         color: #444;
+         width: 190px;
+         border-radius: 5px;
+         border: thin solid #888;
+         box-shadow: 1px 1px 1px grey;
+         white-space: nowrap;
+         }
+         #customBtn:hover {
+         cursor: pointer;
+         }
+         span.label {
+         font-family: serif;
+         font-weight: normal;
+         }
+         span.icon {
+         display: inline-block;
+         vertical-align: middle;
+         width: 42px;
+         height: 42px;
+         }
+         span.buttonText {
+         display: inline-block;
+         vertical-align: middle;
+         padding-left: 42px;
+         padding-right: 42px;
+         font-size: 14px;
+         font-weight: bold;
+         font-family: 'Roboto', sans-serif;
+         }
+         .form-signin
+         {
+         max-width: 330px;
+         padding: 15px;
+         margin: 0 auto;
+         }
+         .form-signin .form-signin-heading, .form-signin .checkbox
+         {
+         margin-bottom: 10px;
+         }
+         .form-signin .checkbox
+         {
+         font-weight: normal;
+         }
+         .form-signin .form-control
+         {
+         position: relative;
+         font-size: 16px;
+         height: auto;
+         padding: 10px;
+         -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+         box-sizing: border-box;
+         }
+         .form-signin .form-control:focus
+         {
+         z-index: 2;
+         }
+         .form-signin input[type="text"]
+         {
+         margin-bottom: -1px;
+         border-bottom-left-radius: 0;
+         border-bottom-right-radius: 0;
+         }
+         .form-signin input[type="password"]
+         {
+         margin-bottom: 10px;
+         border-top-left-radius: 0;
+         border-top-right-radius: 0;
+         }
+         .account-wall
+         {
+         margin-top: 20px;
+         padding: 40px 0px 20px 0px;
+         background-color: #f7f7f7;
+         -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+         -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+         box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+         }
+         .login-title
+         {
+         color: #555;
+         font-size: 18px;
+         font-weight: 400;
+         display: block;
+         }
+         .profile-img
+         {
+         width: 96px;
+         height: 96px;
+         margin: 0 auto 10px;
+         display: block;
+         -moz-border-radius: 50%;
+         -webkit-border-radius: 50%;
+         border-radius: 50%;
+         }
+         .need-help
+         {
+         margin-top: 10px;
+         }
+         .new-account
+         {
+         display: block;
+         margin-top: 10px;
+         }
+      </style>
+   </head>
+   <body>
+      {{{ body }}}
+   </body>
+</html>
+{{else if flag_error}}
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>{{ title }}</title>
+      <link rel="stylesheet" href="/plugins/bootstrap/css/bootstrap.min.css">
+      <link rel="icon" href="/ogc/img/favicon.ico" type="image/x-icon" />
+      <script src="/plugins/jQuery/jquery-2.2.3.min.js"></script>
+      <script src="/plugins/bootstrap/js/bootstrap.min.js"></script>
+      <style>
+         body{ 
+         background:  #E1F6CD;
+         }
+         .error-template{
+         padding: 40px 15px;
+         text-align: center;
+         }
+         .error-actions{
+         margin-top:15px;
+         margin-bottom:15px;
+         }
+         .error-actions .btn{
+         margin-right:10px; 
+         }
+      </style>
+   </head>
+   <body>
+      {{{ body }}}
+   </body>
+</html>
+{{else}}
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width" />
+      <title>{{ args.title }}</title>
+      <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+      <link rel="stylesheet" href="/plugins/bootstrap/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+      <link rel="stylesheet" href="/dist/css/AdminLTE.min.css">
+      <link rel="stylesheet" href="/dist/css/skins/skin-red.min.css">
+
+      <link href="/ogc/css/alertify.min.css" rel="stylesheet">
+      <link href="/ogc/css/default.min.css" rel="stylesheet">
+      <link href="/ogc/css/semantic.min.css" rel="stylesheet">
+      <link href="/ogc/css/jquery-ui.min.css" rel="stylesheet">
+      <link href="/ogc/css/bootstrap-select.min.css" rel="stylesheet">
+
+      {{!-- Custom MICA Stylesheets --}}
+      <link href="/ogc/css/nprogress.css" rel="stylesheet">
+      <link href="/ogc/css/helper.css" rel="stylesheet">     
+      <link href="/ogc/css/iit01.css" rel="stylesheet">
+
+      {{!-- MICA Favicon --}}
+      <link rel="icon" href="/ogc/img/favicon.ico" type="image/x-icon" />
+
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+   </head>
+   <body class="hold-transition skin-red sidebar-mini">
+      <div class="wrapper" id="advs">
+         <!-- Main Header -->
+         <header class="main-header" style="position: fixed; width: 100%;">
+            <input type='hidden' id='studid' value="{{ args.studentIDNumber }}"/>
+            <!-- Logo -->
+            <a href="http://x4150my.msuiit.edu.ph/my/v2/index.php?ref=logo" class="logo">
+               <span class="logo-mini"><b>M</b>y</span>
+               <span class="logo-lg"><b>My.IIT</b></span>
+            </a>
+            <!-- Header Navbar -->
+            <nav class="navbar navbar-static-top" role="navigation">
+               <!-- Sidebar toggle button-->
+               <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+               <span class="sr-only">Toggle navigation</span>
+               </a>
+               <a href="#!" style="float: left; padding: 15px 15px;">
+               <span class="alt-timer">
+               <b class="alt-timer-show" style="padding-top: 20px; color:#f7d853"></b>
+               </span>
+               </a>
+               <!-- Navbar Right Menu -->
+               <div class="navbar-custom-menu">
+                  <ul class="nav navbar-nav">
+                     <!-- User Account Menu -->
+                     <li class="dropdown user user-menu">
+                        <!-- Menu Toggle Button -->
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                           <!-- The user image in the navbar-->
+                           <img src="/static/images/img2.png" class="user-image" alt="User Image">
+                           <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                           <span class="hidden-xs">{{ args.givenName }}</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                           <!-- The user image in the menu -->
+                           <li class="user-header">
+                              <img src="/static/images/img2.png" class="img-circle" alt="User Image">
+                              <p>
+                                 {{ args.completeName }}
+                              </p>
+                           </li>
+                           <!-- Menu Footer-->
+                           <li class="user-footer">
+                              <p>
+                                 <a class="btn btn-default btn-block break-me" target="_blank" id="blah" href="http://x4150my.msuiit.edu.ph/my/v2/redirect.php?id=mail&amp;ref=ogc"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACqklEQVQ4EaXBT2gcVRzA8e/vvTeb6U7jDJnGxproJmgrWi3WnPTiXUopVKtWUUFz8Q80YquCxltREBFysQh6KB4qgtKL4r2I9GaQoIgVW0uF7WaH2d3ZnXnvJxEq3vv5iKpyM+TK8uyx8cn1Q+njTwx9b0t1XCHWckMIAUQwIqj3mDjGZRnFZ2eTa2dWzrs6XzzNd98shgMPEO+9h2YwgKoCY9imqmwTVaTdxiYJ482f8d+eI211HjaD2YWO2fyJ8qWnGH59jihJcHmOqGKMwVqLBVye45KEwZdf0D9+mNYvG1Q793TMpOh1u0t7CU1D9eZr9NZOEooCNzODqqKq2JkZQlFw/e1VBqsrOJTfOnexce2PrtlR9kUix9+vnKLat5/w6TrdZ49QXfyRKMuIsozq4g90nz5E88lHcGCZq6trXJ6MaBc9cY0PTJcF6WOH+ev+g0yvv0/2/Xn6Lxylee8DRAPlu29gij7l0WcYnniHJM/ZdeZDJgIOESZ1w65elzv338ul19eo9t3HrV+dZXTqZVCQ2Tm6Kyeojxxj9/w8rd9/5XIIqAqOENhWNZ64LFnKbuHPJ5/jyuLd7P58neCV7ouvMvXIo8yNK6b6W0yU/zhUQRURqH3A1hPuUOXqg8ts7TmNiLDz9gXSsk/wntBuIyKgigBOUQTlhnFdEzlHpx3Tm1+gaWriaogHRARjDB4wAgHFEPiXBiWEgLWGqNXCOEcaOVpNQx0CIoKxFhEQQEQAxQVDbkcjUKU1NYULnm3ee6y1pGlKWZaoKsYIYgwiBi1LrIbcmFF1oU4zbBRhjcE3DU3T4L2nrmtCCMRxjIjgfUC9ByO05m5j6LngdvRHb11fXHpeRXU8HJowHisi/J8xBlXFe09dVRrAJQcfmr60sfmxqCo34x/ixkOgJHqxYQAAAABJRU5ErkJggg==" data-pagespeed-url-hash="1758099414">&nbsp;&nbsp;{{ args.emailAddress }}</a>
+                              </p>
+                              <div class="pull-left">
+                                 <a href="http://x4150my.msuiit.edu.ph/my/v2/settings.php?ref=ogc" class="btn btn-default btn-flat">Settings</a>
+                              </div>
+                              <div class="pull-right">
+                                 <a href="/saml2/logout" class="btn btn-default btn-flat">Logout</a>
+                              </div>
+                           </li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+            </nav>
+         </header>
+
+         <aside class="main-sidebar" style="position: fixed;">
+            <section class="sidebar">
+               <div class="user-panel" align="center">
+                  <div class="image" align="center">
+                     <a href="/advisee"><img src="/static/images/img2.png" id="logo" style="width: 120px; height: 120px;" class="img-circle" alt="logo" title="Logo"></a>
+                  </div>
+                  <div class="info ellipsis" style="margin-left: 25px;">Test</div>,
+               </div>
+               <ul class="sidebar-menu">
+                <li><a href=""><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+                <li><a href=""><i class="fa fa-list"></i> Submit Form</a></li>
+                <li><a href=""><i class="fa fa-calendar"></i> Counseling Schedule</a></li>
+                <li><a href=""><i class="fa fa-book"></i> Helpful Resources</a></li>                
+               </ul>
+            </section>
+         </aside>
+         {{{ body }}}
+         <div class="modal modal-success fade" id="modal-success" style="display: none;">
+            <div class="modal-dialog">
+               <div class="modal-content">
+                  <div class="modal-header" id="successModalHead" style="background-color: #c0ffe2 !important; color: #578872 !important; border: 1px solid #c0ffe2 !important">
+                     <h4 class="modal-title" id="successModalHeader" style="font-size: 20px;"><i class="icon fa fa-check">&nbsp;</i>Success</h4>
+                  </div>
+                  <div class="modal-body" id="successModalBody" style="background-color: #c0ffe2 !important;">
+                     <div class="row">
+                        <div class="col-md-12" id="modalSuccessContent" style="color: #578872 !important; font-size: 17px;"></div>
+                     </div>
+                  </div>
+                  <div class="modal-footer" id="successFooter" style="background-color: #c0ffe2 !important; border: 1px solid #c0ffe2 !important;">
+                     <button id="successRedirect" style="color: #578872 !important; border: 1px solid #578872 !important" type="button" class="btn btn-outline pull-right" data-dismiss="modal">Close</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="modal modal-warning fade" id="modal-warning" style="display: none;">
+            <div class="modal-dialog">
+               <div class="modal-content">
+                  <div class="modal-header" id="warningModalHead" style="background-color: #ffcfb0 !important; color: #91521e !important; border: 1px solid #ffb34e !important">
+                     <h4 class="modal-title" id="warningModalHeader" style="font-size: 20px;"><i class="icon fa fa-warning">&nbsp;&nbsp;</i>Warning</h4>
+                  </div>
+                  <div class="modal-body" id="successModalBody" style="background-color: #ffcfb0 !important;">
+                     <div class="row">
+                        <div class="col-md-12" id="modalWarningContent" style="color: #91521e !important; font-size: 17px;"></div>
+                     </div>
+                  </div>
+                  <div class="modal-footer" id="warningFooter" style="background-color: #ffcfb0 !important; border: 1px solid #ffb34e !important;">
+                     <button id="warnRedirect" style="color: #91521e !important; border: 1px solid #ffb34e !important" type="button" class="btn btn-outline pull-right" data-dismiss="modal">Close</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="modal modal-danger fade" id="modal-danger" style="display: none;">
+            <div class="modal-dialog">
+               <div class="modal-content">
+                  <div class="modal-header" style="background-color: #ffc3bb !important; color: #cd4545 !important; border: 1px solid #ffc3bb !important">
+                     <h4 class="modal-title" style="font-size: 20px;"><i class='icon fa fa-close'>&nbsp;</i>Error</h4>
+                  </div>
+                  <div class="modal-body" style="background-color: #ffc3bb !important;">
+                     <div class="row">
+                        <div class="col-md-12" id="modalDangerContent" style="color: #cd4545 !important; font-size: 17px;">
+                        </div>
+                     </div>
+                  </div>
+                  <div class="modal-footer" style="background-color: #ffc3bb !important; border: 1px solid #ffc3bb !important;">
+                     <button id="warningRedirect" type="button" style="color: #cd4545 !important; border: 1px solid #d55454 !important" class="btn btn-outline pull-right" data-dismiss="modal" >Close</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="modal modal-info fade" id="modal-info" style="display: none;">
+            <div class="modal-dialog">
+               <div class="modal-content">
+                  <div class="modal-header" style="background-color: #d1ecf1 !important; color: #31708f !important; border: 1px solid #d1ecf1 !important">
+                     <h4 class="modal-title" style="font-size: 20px;"></h4>
+                  </div>
+                  <div class="modal-body" style="background-color: #d1ecf1 !important;">
+                     <div class="row">
+                        <div class="col-md-12" id="modalInfoContent" style="color: #31708f !important; font-size: 17px;">
+                        </div>
+                     </div>
+                  </div>
+                  <div class="modal-footer" style="background-color: #d1ecf1 !important; border: 1px solid #d1ecf1 !important;">
+                     <button id="infoRedirect" type="button" style="color: #31708f !important; border: 1px solid #97d8ef !important" class="btn btn-outline pull-right" data-dismiss="modal" >Close</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="modal fade" style="padding-top: 20vh;" id="optionModal2" tabindex="-1" data-backdrop="static" role="dialog" data-keyboard="false" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+               <div class="modal-content" style="background-color: #f8ffbd !important">
+                  <div class="modal-header">
+                     <h4 class="modal-title" id="exampleModalLabel2">Processing request. Please wait...</h4>
+                  </div>
+                  <div align="center" class="modal-body" id="modifyoptions">
+                     <div class="progress active">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                        </div>
+                     </div>
+                  </div>
+                  <div class="modal-footer">
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="modal fade" id="pleaseWaitDialog" data-backdrop="static" data-keyboard="false" aria-hidden="true">
+            <div class="modal-dialog" role="document" style="padding-top: 200px;">
+               <div class="modal-content" style="background-color: #f8ffbd !important">
+                  <div class="modal-header">
+                  <h3 id="loadscreenInstructions" style="color: #4a4c32 !important;">Preparing environment, Please wait</h3>
+                  </div>
+                  <div class="modal-body">
+                  <div class="progress active">
+                     <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                     </div>
+                  </div>
+                  </div>
+               </div>
+            </div>
+         </div>        
+
+         <div id="sessionModal" class="modal fade" role="dialog" style="height: 100%; vertical-align: middle; top: 20% !important;">
+            <div class="modal-dialog">
+               <div class="modal-content">
+                 <div class="modal-header">
+                   <button type="button" class="close" data-dismiss="modal" onclick="location.href = window.location.href;">&times;</button>
+                 </div>
+                 <div class="modal-body">
+                   <h4>You have been idle for 5 minutes. Click on the Close button to refresh your page.</h4>
+                 </div>
+                 <div class="modal-footer">
+                   <button type="button" class="btn btn-danger rounded submit px-3" data-dismiss="modal" onclick="location.href = window.location.href;"><i class='fa fa-times'></i>&nbsp;Close</button>
+                 </div>
+               </div>
+            </div>
+         </div>
+         <footer class="main-footer hidden-print ">
+            <p class="pull-right visible-lg"></p>
+            <p>Copyright &copy; 2022 onwards, <a target="_blank" href="http://www.msuiit.edu.ph">Mindanao State University - Iligan Institute of Technology</a>.</p>
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+            <script>
+               (function() {
+
+                 const idleDurationSecs = 300;    // X number of seconds
+                 const redirectUrl = window.location.href;  // Redirect idle users to this URL
+                 let idleTimeout; // variable to hold the timeout, do not modify
+
+                 const resetIdleTimeout = function() {
+                     
+                     // Clears the existing timeout
+                     if(idleTimeout) clearTimeout(idleTimeout);
+
+                     // Set a new idle timeout to load the redirectUrl after idleDurationSecs
+                     idleTimeout = setTimeout(() => $('#sessionModal').modal('toggle'), idleDurationSecs * 1000);
+                 };
+
+                 // Init on page load
+                 resetIdleTimeout();
+
+                 // Reset the idle timeout on any of the events listed below
+                 ['click', 'touchstart', 'mousemove'].forEach(evt => 
+                     document.addEventListener(evt, resetIdleTimeout, false)
+                 );
+
+               })();
+            </script>
+         </footer>
+      </div>
+      <script src="/plugins/jQuery/jquery-2.2.3.min.js"></script>
+      <script src="/plugins/jQueryUI/jquery-ui.min.js"></script>
+      <script src="/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+      <script src="/plugins/chartjs/Chart.min.js"></script>
+      <script src="/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+      
+      {{!-- AdminLTE JS Source Files --}}
+      <script src="/dist/js/app.min.js"></script>
+
+      {{!-- Custom MICA JS Source Files --}}
+      <script src="/ogc/js/alertify.min.js"></script>      
+      <script src="/ogc/js/bootstrap-select.min.js"></script>
+      <script src="/ogc/js/nprogress.js"></script>
+   </body>
+</html>
+{{/if}}

@@ -1,0 +1,752 @@
+/* Make clicks pass-through */
+#nprogress {
+  pointer-events: none;
+}
+
+#nprogress .bar {
+  background: #29d;
+
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 2px;
+}
+
+/* Fancy blur effect */
+#nprogress .peg {
+  display: block;
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  height: 100%;
+  box-shadow: 0 0 10px #29d, 0 0 5px #29d;
+  opacity: 1.0;
+
+  -webkit-transform: rotate(3deg) translate(0px, -4px);
+      -ms-transform: rotate(3deg) translate(0px, -4px);
+          transform: rotate(3deg) translate(0px, -4px);
+}
+
+/* Remove these to get rid of the spinner */
+#nprogress .spinner {
+  display: block;
+  position: fixed;
+  z-index: 1031;
+  top: 15px;
+ /* left: 90px;*/
+  left: 80%;
+}
+
+#nprogress .spinner-icon {
+  width: 18px;
+  height: 18px;
+  box-sizing: border-box;
+
+  border: solid 2px transparent;
+  border-top-color: #29d;
+  border-left-color: #29d;
+  border-radius: 50%;
+
+  -webkit-animation: nprogress-spinner 400ms linear infinite;
+          animation: nprogress-spinner 400ms linear infinite;
+}
+
+.nprogress-custom-parent {
+  overflow: hidden;
+  position: relative;
+}
+
+.nprogress-custom-parent #nprogress .spinner,
+.nprogress-custom-parent #nprogress .bar {
+  position: absolute;
+}
+
+@-webkit-keyframes nprogress-spinner {
+  0%   { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes nprogress-spinner {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 767px){
+  #nprogress .spinner {
+    left: 92%;
+  }
+
+  #adviserOptions {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  #adviserOptions2 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .ajs-message{
+    display: none;
+  }
+
+  .alt-timer{
+    display: fixed;
+  }
+
+  .alt-timer-color{
+    background-color: #8FBC8F;
+  }
+
+  .checkmeup{
+    right: 0;
+    position: relative !important;
+  }
+  .dropPosition{
+    left: 0px !important;
+  }
+
+  .previewFunc{
+    display: none;
+  }
+
+  #prospectusLegendTable {
+    width: 75%; 
+    margin: 0px auto;
+  }
+}
+
+@media (min-width: 768px ) and (max-width: 799px){
+  #nprogress .spinner {
+    left: 58%;
+  }
+  #adviserOptions {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+
+  #adviserOptions2 {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+  .alt-timer{
+    display: none;
+  }
+
+  .alt-timer-color{
+    background-color: white;
+  }
+
+  .checkmeup{
+      right: 10px;
+      position: absolute !important;
+  }
+  .dropPosition{
+    left: -90px !important;
+  }
+
+  .previewFunc{
+    display: inline-block;
+  }
+
+  #prospectusLegendTable {
+    width: 45%; 
+    margin: 0px auto;
+  }
+
+}
+
+@media (min-width: 800px){
+  #nprogress .spinner {
+    left: 59%;
+  }
+  #adviserOptions {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+
+  #adviserOptions2 {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+   .alt-timer{
+    display: none;
+  }
+
+  .alt-timer-color{
+    background-color: white;
+  }
+
+  .checkmeup{
+      right: 10px;
+      position: absolute !important;
+  }
+  .dropPosition{
+    left: -90px !important;
+  }
+
+  .previewFunc{
+    display: inline-block;
+  }
+
+  #prospectusLegendTable {
+    width: 40%; 
+    margin: 0px auto;
+  }
+}
+
+@media (min-width: 1024px){
+  #nprogress .spinner{
+    left: 68%;
+  }
+  #adviserOptions {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+
+  #adviserOptions2 {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+   .alt-timer{
+    display: none;
+  }
+
+  .alt-timer-color{
+    background-color: white;
+  }
+  .checkmeup{
+      right: 10px;
+      position: absolute !important;
+  }
+  .dropPosition{
+    left: -90px !important;
+  }
+
+  .previewFunc{
+    display: inline-block;
+  }
+
+  #prospectusLegendTable {
+    width: 35%; 
+    margin: 0px auto;
+  }
+}
+
+@media (min-width: 1280px){
+  #nprogress .spinner {
+    left: 73%;
+  }
+  #adviserOptions {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+
+   #adviserOptions2 {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+   .alt-timer{
+    display: none;
+  }
+
+  .alt-timer-color{
+    background-color: white;
+  }
+  .checkmeup{
+      right: 10px;
+      position: absolute !important;
+  }
+  .dropPosition{
+    left: -90px !important;
+  }
+
+  .previewFunc{
+    display: inline-block;
+  }
+
+  #prospectusLegendTable {
+    width: 30%; 
+    margin: 0px auto;
+  }
+}
+
+@media (min-width: 1440px){
+  #nprogress .spinner {
+    left: 76%;
+  }
+  #adviserOptions {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  #adviserOptions2 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+   .alt-timer{
+    display: none;
+  }
+
+  .alt-timer-color{
+    background-color: white;
+  }
+  .checkmeup{
+      right: 10px;
+      position: absolute !important;
+  }
+  .dropPosition{
+    left: -90px !important;
+  }
+
+  .previewFunc{
+    display: inline-block;
+  }
+
+  #prospectusLegendTable {
+    width: 25%; 
+    margin: 0px auto;
+  }
+}
+
+#studinfotable tr td{
+  border: 1px solid #dbd8d0;
+  padding: 3pt 0 3pt 3pt;
+}
+
+body .wrapper .main-header .navbar{
+  background-color: #a41d21;
+}
+
+body .wrapper .main-header .logo{
+  background-color: #931d23;
+}
+
+.alternative_cls:nth-child(odd){
+    background: #F5F5F5;
+}
+
+
+/* fitness colors*/
+
+.custom-styles80-100 {
+  color: #32CD32;
+}
+
+.custom-styles60-80 {
+  color: #00FA9A;
+}
+
+.custom-styles40-60 {
+  color: #FF8C00;
+}
+
+.custom-styles20-40 {
+  color:  #FF4500;
+}
+
+.custom-styles0-20 {
+  color: #A52A2A;
+}
+
+/* advise button size */
+.btn-xlarge {
+    padding: 18px 28px;
+    font-size: 15px; //change this to your desired size
+    line-height: normal;
+    -webkit-border-radius: 8px;
+       -moz-border-radius: 8px;
+            border-radius: 8px;
+}
+
+.apiLoadedSubj{
+  background-color: #17a2b8 !important;
+  color: white;
+}
+
+.caret-right {
+    border-bottom: 4px solid transparent;
+    border-top: 4px solid transparent;
+    border-left: 4px solid;
+    display: inline-block;
+    height: 0;
+    opacity: 0.3;
+    vertical-align: top;
+    width: 0;
+}
+
+.dropdown-divider{
+  height: 0;
+  margin: .5rem 0;
+  overflow: hidden;
+  border-top: 1px solid #e9ecef;
+}
+
+.active-font-color{
+  color: #f7d853;
+}
+
+#advs2.content a:hover{
+  opacity: .8;
+}
+
+#advs2.content a{
+  opacity: .5;
+}
+
+li.inactive  a.hoverall:hover{
+  color: #f7d853;
+}
+
+.main-sidebar .sidebar .sidebar-menu li.active1 a{
+  color: #f7d853;
+  background: #1e282c;
+  border-left-color: #1e282c;
+}
+
+tr.cross-out,
+tr.cross-out td {
+    background: transparent url('/static/mica/img/strike.png') 0 50% repeat-x;
+}
+
+.cross-out-dim{
+  background: transparent url('/static/mica/img/strike.png') 0 50% repeat-x;
+}
+
+#modifyModal div div ul.nav-tabs .active a{
+  background-color: #398439 !important;
+  color: white;
+}
+
+.customradio {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.customradio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom radio button */
+.tickradio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #d4d4d4;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.customradio:hover input ~ .tickradio {
+  background-color: #9ce49a;
+}
+
+/* When the radio button is checked, add a green background */
+.customradio input:checked ~ .tickradio {
+  background-color: #008d4c;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.tickradio:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.customradio input:checked ~ .tickradio:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.customradio .tickradio:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+
+/*.customcheck {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}*/
+
+/* Hide the browser's default checkbox */
+/*.customcheck input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+*/
+/* Create a custom checkbox */
+/*.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 5px;
+}*/
+
+/* On mouse-over, add a grey background color */
+/*.customcheck:hover input ~ .checkmark {
+    background-color: #ccc;
+}*/
+
+/* When the checkbox is checked, add a blue background */
+/*.customcheck input:checked ~ .checkmark {
+    background-color: #02cf32;
+    border-radius: 5px;
+}*/
+
+/* Create the checkmark/indicator (hidden when not checked) */
+/*.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}*/
+
+/* Show the checkmark when checked */
+/*.customcheck input:checked ~ .checkmark:after {
+    display: block;
+}*/
+
+/* Style the checkmark/indicator */
+/*.customcheck .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}*/
+
+
+
+  .new_close_btn{
+    position: absolute !important;
+    top: -12px !important;
+    right: -12px !important;
+    background-color: #dd4b39 !important;
+    opacity: 1.0 !important;
+    border-radius: 50% !important;
+    color: white !important;
+    border: 1px solid white !important;
+  }
+
+
+    @media(min-width: 1100px){
+      .slotholdCombo{
+        float: right;
+      }
+    }
+
+    @media screen and (min-width: 768px){
+      .carousel-indicators {
+          bottom: -20px !important;
+      }
+    }
+
+
+    *,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+.step { 
+  position: relative; 
+  min-height: 32px /* circle-size */ ; 
+}
+.step > div:first-child {
+ position: static; 
+ height: 0;
+ }
+.step > div:last-child {
+ margin-left: 32px ; 
+ padding-left: 16px; 
+}
+.circle { 
+  background: darkslategray; 
+  width: 32px; 
+  height: 32px; 
+  line-height: 32px; 
+  border-radius: 16px; 
+  position: relative; 
+  color: white; 
+  text-align: center; 
+}
+.line { 
+  position: absolute; 
+  /*border-left: 1px solid gainsboro; 
+  left: 16px; 
+  bottom: 10px; 
+  top: 42px; */
+  border-left: 4px solid darkslategray; 
+  left: 28px; 
+  bottom: -395px; 
+  top: 48px; 
+}
+.step:last-child .line { 
+  display: none; 
+}
+.title { 
+  line-height: 32px; 
+  font-weight: bold; 
+}
+
+.greenify{
+  background: green !important;
+}
+
+.greenify-border{
+  border-left: 4px solid green !important;
+}
+
+.blueify{
+  background: #4285f4;
+}
+
+.makeItBolder{
+  font-size: 2rem;
+  color: black !important;
+}
+
+.instructionSets{
+  color: darkslategray;
+}
+
+.border-highlight{
+  border: 1px solid white;
+}
+
+.bootstrap-select{
+  display: block !important;
+}
+
+#scheduleBody div table tbody tr .rightTime{
+  line-height: 1.2 !important;
+  width: 15% !important;
+  font-weight: 400 !important;
+  text-align: center;
+}
+
+#scheduleBody div table thead th{
+  text-align: center;
+}
+
+#scheduleBody div table tbody tr td:not(.rightTime){
+  line-height: 1.2 !important;
+  width: 10% !important;
+  font-weight: 400 !important;
+/*  border: 0px solid black !important;*/
+  color: white;
+}
+
+.grid-rows-for-sched{
+  border: 0px solid black !important;
+  opacity: .8;
+  box-shadow: 2px 0px 0px 0px rgba(0,0,0,0.2),
+        3px 0px 0px 0px rgba(0,0,0,0.2),
+        4px 0px 0px 0px rgba(0,0,0,0.2),
+        5px 0px 0px 0px rgba(0,0,0,0.2);
+}
+
+.grid-rows-for-sched_drpShadow{
+/*  box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.2),
+        3px 3px 0px 0px rgba(0,0,0,0.2),
+        4px 4px 0px 0px rgba(0,0,0,0.2),
+        5px 5px 0px 0px rgba(0,0,0,0.2) !important;*/
+}
+
+.previewFuncMaster:hover, .previewFuncMaster:active{
+  background-color: lightgrey;
+}
+
+
+
+
+
+/*see more*/
+.material-switch > input[type="checkbox"] {
+    display: none;   
+}
+
+.material-switch > label {
+    cursor: pointer;
+    height: 0px;
+    position: relative; 
+    width: 40px;  
+}
+
+.material-switch > label::before {
+    background: rgb(0, 0, 0);
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    content: '';
+    height: 16px;
+    margin-top: -8px;
+    position:absolute;
+    opacity: 0.3;
+    transition: all 0.4s ease-in-out;
+    width: 40px;
+}
+.material-switch > label::after {
+    background: rgb(255, 255, 255);
+    border-radius: 16px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    content: '';
+    height: 24px;
+    left: -4px;
+    margin-top: -8px;
+    position: absolute;
+    top: -4px;
+    transition: all 0.3s ease-in-out;
+    width: 24px;
+}
+.material-switch > input[type="checkbox"]:checked + label::before {
+    background: inherit;
+    opacity: 0.5;
+}
+.material-switch > input[type="checkbox"]:checked + label::after {
+    background: inherit;
+    left: 20px;
+}
+
+
+
+
+
+
+
